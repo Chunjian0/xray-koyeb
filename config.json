@@ -1,32 +1,32 @@
 {
-  "log": { "loglevel": "warning" },
-  "inbounds": [{
-    "port": 443,
-    "protocol": "vless",
-    "settings": {
-      "clients": [
-        {
-          "id": "9b6ee8f1-cf88-44fd-83c9-938244cb46df",
-          "flow": "xtls-rprx-vision"
-        }
-      ],
-      "decryption": "none"
-    },
-    "streamSettings": {
-      "network": "ws",
-      "security": "tls",
-      "tlsSettings": {
-        "certificates": [
+  "log": {
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
           {
-            "certificateFile": "/etc/ssl/xray.crt",
-            "keyFile": "/etc/ssl/xray.key"
+            "id": "9b6ee8f1-cf88-44fd-83c9-938244cb46df",
+            "encryption": "none"
           }
-        ]
+        ],
+        "decryption": "none"
       },
-      "wsSettings": {
-        "path": "/ray"
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ray"
+        }
       }
     }
-  }],
-  "outbounds": [{ "protocol": "freedom" }]
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
