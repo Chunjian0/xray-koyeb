@@ -11,8 +11,7 @@ RUN curl -L -o xray.zip https://github.com/XTLS/Xray-core/releases/latest/downlo
     rm -rf xray.zip geo* *.dat *.json LICENSE README.md
 
 COPY config.json /app/config.json
-COPY fullchain.pem /app/fullchain.pem
-COPY privkey.pem /app/privkey.pem
+
 
 EXPOSE 443
 
