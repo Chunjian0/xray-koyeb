@@ -31,7 +31,7 @@
         "wsSettings": {
           "path": "/ray",
           "headers": {
-            "Host": "panicky-lynsey-chunjian0-8eca0f5d.koyeb.app"
+            "Host": "{{HOSTNAME}}"
           }
         }
       }
