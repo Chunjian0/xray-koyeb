@@ -9,8 +9,7 @@
       "settings": {
         "clients": [
           {
-            "id": "9b6ee8f1-cf88-44fd-83c9-938244cb46df",
-            "encryption": "none"
+            "id": "9b6ee8f1-cf88-44fd-83c9-938244cb46df"
           }
         ],
         "decryption": "none"
