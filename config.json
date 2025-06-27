@@ -4,13 +4,12 @@
   },
   "inbounds": [
     {
-      "port": 3000,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
             "id": "540bb877-7021-47fe-be10-88bbb3cad536",
-            "flow": "xtls-rprx-vision",
             "level": 0
           }
         ],
@@ -18,7 +17,7 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none", 
+        "security": "none",
         "wsSettings": {
           "path": "/vless"
         }
