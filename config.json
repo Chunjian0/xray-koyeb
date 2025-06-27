@@ -1,23 +1,27 @@
 {
   "log": {
-    "loglevel": "info"
+    "loglevel": "warning"
   },
   "inbounds": [
     {
-      "port": 8080,
+      "port": 8000,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "9b6ee8f1-cf88-44fd-83c9-938244cb46df"
+            "id": "18458df0-7cb1-40af-a414-1c9817e8d57f",
+            "encryption": "none",
+            "flow": "",
+            "level": 0
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
+        "security": "none",
         "wsSettings": {
-          "path": "/ray"
+          "path": "/websocket"
         }
       }
     }
