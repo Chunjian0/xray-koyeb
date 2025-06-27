@@ -4,24 +4,30 @@
   },
   "inbounds": [
     {
-      "port": 8000,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "18458df0-7cb1-40af-a414-1c9817e8d57f",
-            "encryption": "none",
+            "id": "${UUID}",
             "flow": "",
-            "level": 0
+            "level": 0,
+            "email": "user@example.com"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "available-vole-chunjian0-663768e9.koyeb.app"
+        },
         "wsSettings": {
-          "path": "/websocket"
+          "path": "/",
+          "headers": {
+            "Host": "available-vole-chunjian0-663768e9.koyeb.app"
+          }
         }
       }
     }
