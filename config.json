@@ -9,22 +9,27 @@
       "settings": {
         "clients": [
           {
-            "id": "${UUID}",
-            "flow": "",
+            "id": "bde4e75b-163b-4b61-9a61-bc8dbf1623ad",
+            "flow": "xtls-rprx-vision",
             "level": 0,
-            "email": "user@example.com"
+            "email": "vpnuser@xray.com"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
+        "security": "none",
         "tlsSettings": {
-          "serverName": "available-vole-chunjian0-663768e9.koyeb.app"
+          "certificates": [
+            {
+              "certificateFile": "/app/fullchain.pem",
+              "keyFile": "/app/privkey.pem"
+            }
+          ]
         },
         "wsSettings": {
-          "path": "/",
+          "path": "/ray",
           "headers": {
             "Host": "available-vole-chunjian0-663768e9.koyeb.app"
           }
@@ -36,6 +41,23 @@
     {
       "protocol": "freedom",
       "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
     }
-  ]
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked"
+      }
+    ]
+  }
 }
