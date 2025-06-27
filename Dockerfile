@@ -1,4 +1,4 @@
-FROM teddysun/xray
+FROM teddysun/xray-core:latest
 
 COPY config.json /etc/xray/config.json
 
